@@ -22,6 +22,8 @@ import StreamHandler from './stream';
 import TraceHandler from './trace';
 import VisualHandler from './visual';
 
+export const eventHandlers = [CaptureHandler(), InteractionHandler(), TraceHandler()];
+
 export default ({ API_HANDLER_ENDPOINT, INTEGRATIONS_HANDLER_ENDPOINT, CODE_HANDLER_ENDPOINT }: Config) => [
   ...StateHandlers(),
   SpeakHandler(),
